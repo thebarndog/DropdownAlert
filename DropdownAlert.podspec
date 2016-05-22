@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DropdownAlert'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'Customizable, simple, dropdown alert written in Swift.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-DropdownAlert offers a simple, easy-to-use alternative to RKDropdownAlert, written entirely in swift. DropdownAlert is responsive and powered by Facebook's pop animation engine.
+DropdownAlert offers a simple, easy-to-use alternative to RKDropdownAlert, written entirely in Swift. DropdownAlert is responsive and powered by Facebook's pop animation engine.
                        DESC
 
   s.homepage         = 'https://github.com/startupthekid/DropdownAlert'
