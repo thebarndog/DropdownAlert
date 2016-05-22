@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DropdownAlert'
-  s.version          = '1.0.1'
+  s.version          = '1.0.3'
   s.summary          = 'Customizable, simple, dropdown alert written in Swift.'
 
 # This description is used to generate tags and improve search results.
