@@ -1,6 +1,6 @@
 # DropdownAlert
 
-[![CI Status](http://img.shields.io/startupthekid/DropdownAlert.svg?style=flat)](https://travis-ci.org/startupthekid/DropdownAlert)
+[![CI Status](http://img.shields.io/travis/startupthekid/DropdownAlert.svg?style=flat)](https://travis-ci.org/startupthekid/DropdownAlert)
 [![Version](https://img.shields.io/cocoapods/v/DropdownAlert.svg?style=flat)](http://cocoapods.org/pods/DropdownAlert)
 [![License](https://img.shields.io/cocoapods/l/DropdownAlert.svg?style=flat)](http://cocoapods.org/pods/DropdownAlert)
 [![Platform](https://img.shields.io/cocoapods/p/DropdownAlert.svg?style=flat)](http://cocoapods.org/pods/DropdownAlert)
