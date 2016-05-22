@@ -31,6 +31,7 @@ public class DropdownAlert: UIView {
 
     // MARK: - Views
 
+        /// Alert title label.
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .Center
@@ -38,6 +39,7 @@ public class DropdownAlert: UIView {
         return label
     }()
 
+        /// Alert message label.
     private lazy var messageLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .Center
@@ -47,6 +49,9 @@ public class DropdownAlert: UIView {
 
     // MARK: - Defaults
 
+    /**
+     Class defaults.
+     */
     private struct Defaults {
         static var BackgroundColor = UIColor.whiteColor()
         static var TextColor = UIColor.blackColor()
