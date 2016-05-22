@@ -90,8 +90,6 @@ Feel free to open an issue or issue a PR! Check out the [contribution guide](Dro
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
 DropdownAlert is available through [CocoaPods](http://cocoapods.org). To install
