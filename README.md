@@ -84,7 +84,7 @@ DropdownAlert.defaultBackgroundColor = UIColor.blueColor()
 
 ## Support
 
-Feel free to open an issue or issue a PR! Check out [the contribution guide](DropdownAlert/CHANGELOG.md) for more info.
+Feel free to open an issue or issue a PR! Check out the [contribution guide](DropdownAlert/CHANGELOG.md) for more info.
 
 ## Example
 
@@ -103,7 +103,8 @@ pod "DropdownAlert"
 
 ## Author
 
-Brendan Conron, conronb@gmail.com
+Brendan Conron, conronb@gmail.com.
+[Twitter](https://twitter.com/startupthekid)
 
 ## License
 
