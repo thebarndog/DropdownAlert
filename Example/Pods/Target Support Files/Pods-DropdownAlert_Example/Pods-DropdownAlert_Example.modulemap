@@ -1,0 +1,6 @@
+framework module Pods_DropdownAlert_Example {
+  umbrella header "Pods-DropdownAlert_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

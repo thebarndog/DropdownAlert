@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/DropdownAlert.svg?style=flat)](http://cocoapods.org/pods/DropdownAlert)
 [![Platform](https://img.shields.io/cocoapods/p/DropdownAlert.svg?style=flat)](http://cocoapods.org/pods/DropdownAlert)
 
+A clean, customizable Swift alternative to [RKDropdownAlert](https://github.com/cwRichardKim/RKDropdownAlert).
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

@@ -1,0 +1,6 @@
+framework module DropdownAlert {
+  umbrella header "DropdownAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}
