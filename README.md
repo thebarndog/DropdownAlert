@@ -14,6 +14,10 @@ First, it's written in Objective-C and any Swift developer will tell you the sam
 
 ![ew](DropdownAlert/Assets/ew.gif)
 
+Second, there's a huge caveat:
+
+> WAIT! Don't use pods if you want to customize or use the quick and easy [RKDropdownAlert show]
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
