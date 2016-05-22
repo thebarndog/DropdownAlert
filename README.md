@@ -1,11 +1,13 @@
 # DropdownAlert
 
-[![CI Status](http://img.shields.io/travis/Brendan Conron/DropdownAlert.svg?style=flat)](https://travis-ci.org/Brendan Conron/DropdownAlert)
+[![CI Status](http://img.shields.io/startupthekid/DropdownAlert.svg?style=flat)](https://travis-ci.org/startupthekid/DropdownAlert)
 [![Version](https://img.shields.io/cocoapods/v/DropdownAlert.svg?style=flat)](http://cocoapods.org/pods/DropdownAlert)
 [![License](https://img.shields.io/cocoapods/l/DropdownAlert.svg?style=flat)](http://cocoapods.org/pods/DropdownAlert)
 [![Platform](https://img.shields.io/cocoapods/p/DropdownAlert.svg?style=flat)](http://cocoapods.org/pods/DropdownAlert)
 
 A clean, customizable Swift alternative to [RKDropdownAlert](https://github.com/cwRichardKim/RKDropdownAlert).
+
+## Overview
 
 RKDropdownAlert is great. It's simple and easy to use.
 But...there are some problems.
