@@ -14,9 +14,17 @@ First, it's written in Objective-C and any Swift developer will tell you the sam
 
 ![ew](DropdownAlert/Assets/ew.gif)
 
-Second, there's a huge caveat:
+Second, it's not responsive. To be truly responsive, any view library **should** be written using AutoLayout.
+
+Finally, there's a huge caveat:
 
 > WAIT! Don't use pods if you want to customize or use the quick and easy [RKDropdownAlert show]
+
+Developers have come to expect the convenience of Cocoapods and if you can't both customize the dropdown and download it from Cocoapods, what's the point?
+
+That's where `DropdownAlert` comes in. Weighing in at just under 300 lines, `DropdownAlert` is _sleek_, _fully customizable_, _responsive_, and powered by [Facebook's pop](https://github.com/facebook/pop) animation library, allowing for awesome custom animations.
+
+## Usage
 
 ## Example
 
