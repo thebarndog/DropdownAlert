@@ -1,9 +1,9 @@
 {
   "name": "DropdownAlert",
   "version": "0.1.0",
-  "summary": "A short description of DropdownAlert.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/DropdownAlert",
+  "summary": "Customizable, simple, dropdown alert written in Swift.",
+  "description": "DropdownAlert offers a simple, easy-to-use alternative to RKDropdownAlert, written entirely in swift. DropdownAlert is responsive and powered by Facebook's pop animation engine.",
+  "homepage": "https://github.com/startupthekid/DropdownAlert",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,22 @@
     "Brendan Conron": "conronb@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/DropdownAlert.git",
+    "git": "https://github.com/startupthekid/DropdownAlert.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/startupthekid",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "DropdownAlert/Classes/**/*"
+  "source_files": "DropdownAlert/Classes/*",
+  "resource_bundles": {
+    "DropdownAlert": [
+      "DropdownAlert/Assets/*.*"
+    ]
+  },
+  "dependencies": {
+    "pop": [
+
+    ]
+  }
 }

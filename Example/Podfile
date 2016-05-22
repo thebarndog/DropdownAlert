@@ -2,13 +2,13 @@ use_frameworks!
 
 target 'DropdownAlert_Example' do
   pod 'DropdownAlert', :path => '../'
+  pod 'pop'
 
   target 'DropdownAlert_Tests' do
     inherit! :search_paths
 
     pod 'Quick', '~> 0.8'
-  pod 'Nimble', '~> 3.0'
-  pod 'FBSnapshotTestCase'
-  pod 'Nimble-Snapshots'
+    pod 'Nimble', '~> 3.0'
+
   end
 end
