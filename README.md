@@ -12,7 +12,7 @@ But...there are some problems.
 
 First, it's written in Objective-C and any Swift developer will tell you the same thing:
 
-![alt tag](http://giphy.com/gifs/gMDKyrWInxOhO)
+![ew](DropdownAlert/Assets/ew.gif)
 
 ## Example
 
