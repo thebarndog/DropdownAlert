@@ -54,7 +54,7 @@ DropdownAlert.showWithAnimation(.Basic(timingFunction: CAMediaTimingFunction(nam
 
 You can stack as many animations as you want:
 
-![stacked-animations](DropdownAlert/Assets/stacked-animations.gif)
+![stacked-animations](DropdownAlert/Assets/stacked-animation.gif)
 
 ### Customization
 
