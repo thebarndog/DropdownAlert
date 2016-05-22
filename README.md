@@ -104,6 +104,7 @@ pod "DropdownAlert"
 ## Author
 
 Brendan Conron, conronb@gmail.com.
+
 [Twitter](https://twitter.com/startupthekid)
 
 ## License
