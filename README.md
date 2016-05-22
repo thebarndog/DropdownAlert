@@ -7,6 +7,13 @@
 
 A clean, customizable Swift alternative to [RKDropdownAlert](https://github.com/cwRichardKim/RKDropdownAlert).
 
+RKDropdownAlert is great. It's simple and easy to use.
+But...there are some problems.
+
+First, it's written in Objective-C and any Swift developer will tell you the same thing:
+
+![alt tag](http://giphy.com/gifs/gMDKyrWInxOhO)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
