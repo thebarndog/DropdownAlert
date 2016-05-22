@@ -82,6 +82,10 @@ DropdownAlert.defaultHeight = 110
 DropdownAlert.defaultBackgroundColor = UIColor.blueColor()
 ```
 
+## Support
+
+Feel free to open an issue or issue a PR! Check out [the contribution guide](DropdownAlert/CHANGELOG.md) for more info.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

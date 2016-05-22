@@ -17,6 +17,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		ED41166E1CF1FE9600ED85E0 /* CONTRIBUTING.md in Sources */ = {isa = PBXBuildFile; fileRef = ED41166D1CF1FE9600ED85E0 /* CONTRIBUTING.md */; };
 		ED4116701CF1FEED00ED85E0 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = ED41166F1CF1FEED00ED85E0 /* CHANGELOG.md */; };
+		ED4116721CF1FFC800ED85E0 /* CODE_OF_CONDUCT.md in Sources */ = {isa = PBXBuildFile; fileRef = ED4116711CF1FFC800ED85E0 /* CODE_OF_CONDUCT.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		AE53952DE91BA1D44A8823F1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		ED41166D1CF1FE9600ED85E0 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = ../CONTRIBUTING.md; sourceTree = "<group>"; };
 		ED41166F1CF1FEED00ED85E0 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
+		ED4116711CF1FFC800ED85E0 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CODE_OF_CONDUCT.md; path = ../CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				48506D1A681A512B06FF5F95 /* LICENSE */,
 				ED41166D1CF1FE9600ED85E0 /* CONTRIBUTING.md */,
 				ED41166F1CF1FEED00ED85E0 /* CHANGELOG.md */,
+				ED4116711CF1FFC800ED85E0 /* CODE_OF_CONDUCT.md */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				ED41166E1CF1FE9600ED85E0 /* CONTRIBUTING.md in Sources */,
+				ED4116721CF1FFC800ED85E0 /* CODE_OF_CONDUCT.md in Sources */,
 				ED4116701CF1FEED00ED85E0 /* CHANGELOG.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
