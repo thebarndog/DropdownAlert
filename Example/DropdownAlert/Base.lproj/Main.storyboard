@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="DropdownAlert_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,42 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWM-kf-R85">
+                                <rect key="frame" x="150" y="270" width="300" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Basic">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SY1-C4-WW1">
+                                <rect key="frame" x="150" y="350" width="300" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Spring">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SY1-C4-WW1" firstAttribute="height" secondItem="zWM-kf-R85" secondAttribute="height" id="0Bc-KP-ZOS"/>
+                            <constraint firstItem="zWM-kf-R85" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="K9g-bs-G8s"/>
+                            <constraint firstItem="zWM-kf-R85" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="O0m-Dw-E7y"/>
+                            <constraint firstItem="SY1-C4-WW1" firstAttribute="width" secondItem="zWM-kf-R85" secondAttribute="width" id="Pc2-96-o7r"/>
+                            <constraint firstItem="zWM-kf-R85" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.5" id="U58-GJ-G6b"/>
+                            <constraint firstItem="SY1-C4-WW1" firstAttribute="centerX" secondItem="zWM-kf-R85" secondAttribute="centerX" id="Z45-u6-4qo"/>
+                            <constraint firstItem="SY1-C4-WW1" firstAttribute="top" secondItem="zWM-kf-R85" secondAttribute="bottom" constant="20" id="ZPP-SR-agi"/>
+                            <constraint firstItem="zWM-kf-R85" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.1" id="drp-8O-Gq7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="basicAnimationButton" destination="zWM-kf-R85" id="hfv-G1-niN"/>
+                        <outlet property="springAnimationButton" destination="SY1-C4-WW1" id="vU7-uW-YKJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="519" y="421"/>
         </scene>
     </scenes>
 </document>
