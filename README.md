@@ -8,7 +8,7 @@ A clean, customizable Swift alternative to [RKDropdownAlert](https://github.com/
 
 ## Overview
 
-RKDropdownAlert is great. It's simple and easy to use.
+RKDropdownAlert is great. It's simple and easy to use. The developer is a great guy.
 But...there are some problems.
 
 First, it's written in Objective-C and any Swift developer will tell you the same thing:
