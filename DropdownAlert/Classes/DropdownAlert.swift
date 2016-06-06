@@ -106,47 +106,50 @@ public extension DropdownAlert {
                                  backgroundColor: UIColor = Defaults.BackgroundColor,
                                  textColor: UIColor = Defaults.TextColor,
                                  duration: Double = Defaults.Duration) {
-        let windows = UIApplication.sharedApplication().windows.filter { $0.windowLevel == UIWindowLevelNormal && !$0.hidden }
-        guard let window = windows.first else {
-            return
+        // Ensure that everything happens on the main queue
+        dispatch_async(dispatch_get_main_queue()) {
+            let windows = UIApplication.sharedApplication().windows.filter { $0.windowLevel == UIWindowLevelNormal && !$0.hidden }
+            guard let window = windows.first else {
+                return
+            }
+            let dropdown = DropdownAlert()
+            dropdown.translatesAutoresizingMaskIntoConstraints = false
+            dropdown.titleLabel.text = title
+            dropdown.messageLabel.text = message
+            dropdown.titleLabel.textColor = textColor
+            dropdown.messageLabel.textColor = textColor
+            dropdown.backgroundColor = backgroundColor
+
+            // Construct a padding view that will cover the top of the dropdown in the case of a spring animation where it bounces past it's bounds
+            let paddingView = UIView()
+            paddingView.backgroundColor = backgroundColor
+            paddingView.translatesAutoresizingMaskIntoConstraints = false
+
+            window.addSubview(dropdown)
+            window.addSubview(paddingView)
+
+            // Constraint that'll be animated
+            let animatedConstraint = NSLayoutConstraint(item: dropdown, attribute: .Bottom, relatedBy: .Equal, toItem: window, attribute: .Top, multiplier: 1, constant: 0)
+
+            // Add the drop downconstraint
+            window.addConstraint(NSLayoutConstraint(item: dropdown, attribute: .Left, relatedBy: .Equal, toItem: window, attribute: .Left, multiplier: 1, constant: 0))
+            window.addConstraint(NSLayoutConstraint(item: dropdown, attribute: .Right, relatedBy: .Equal, toItem: window, attribute: .Right, multiplier: 1, constant: 0))
+            window.addConstraint(NSLayoutConstraint(item: dropdown, attribute: .Height, relatedBy: .GreaterThanOrEqual, toItem: nil, attribute: .Height, multiplier: 1, constant: Defaults.Height))
+            window.addConstraint(animatedConstraint)
+            // Add the padding view constraints
+            window.addConstraint(NSLayoutConstraint(item: paddingView, attribute: .Width, relatedBy: .Equal, toItem: dropdown, attribute: .Width, multiplier: 1, constant: 0))
+            window.addConstraint(NSLayoutConstraint(item: paddingView, attribute: .Height, relatedBy: .Equal, toItem: dropdown, attribute: .Height, multiplier: 1, constant: 0))
+            window.addConstraint(NSLayoutConstraint(item: paddingView, attribute: .CenterX, relatedBy: .Equal, toItem: dropdown, attribute: .CenterX, multiplier: 1, constant: 0))
+            window.addConstraint(NSLayoutConstraint(item: paddingView, attribute: .Bottom, relatedBy: .Equal, toItem: dropdown, attribute: .Top, multiplier: 1, constant: 0))
+
+            window.layoutIfNeeded()
+
+            let animation = self.popAnimationForAnimationType(animationType)
+            animation.toValue = Defaults.Height
+            animatedConstraint.pop_addAnimation(animation, forKey: "show-dropdown")
+
+            dropdown.performSelector(#selector(dismiss), withObject: nil, afterDelay: duration + Defaults.AnimationDuration)
         }
-        let dropdown = DropdownAlert()
-        dropdown.translatesAutoresizingMaskIntoConstraints = false
-        dropdown.titleLabel.text = title
-        dropdown.messageLabel.text = message
-        dropdown.titleLabel.textColor = textColor
-        dropdown.messageLabel.textColor = textColor
-        dropdown.backgroundColor = backgroundColor
-
-        // Construct a padding view that will cover the top of the dropdown in the case of a spring animation where it bounces past it's bounds
-        let paddingView = UIView()
-        paddingView.backgroundColor = backgroundColor
-        paddingView.translatesAutoresizingMaskIntoConstraints = false
-
-        window.addSubview(dropdown)
-        window.addSubview(paddingView)
-
-        // Constraint that'll be animated
-        let animatedConstraint = NSLayoutConstraint(item: dropdown, attribute: .Bottom, relatedBy: .Equal, toItem: window, attribute: .Top, multiplier: 1, constant: 0)
-
-        // Add the drop downconstraint
-        window.addConstraint(NSLayoutConstraint(item: dropdown, attribute: .Left, relatedBy: .Equal, toItem: window, attribute: .Left, multiplier: 1, constant: 0))
-        window.addConstraint(NSLayoutConstraint(item: dropdown, attribute: .Right, relatedBy: .Equal, toItem: window, attribute: .Right, multiplier: 1, constant: 0))
-        window.addConstraint(NSLayoutConstraint(item: dropdown, attribute: .Height, relatedBy: .GreaterThanOrEqual, toItem: nil, attribute: .Height, multiplier: 1, constant: Defaults.Height))
-        window.addConstraint(animatedConstraint)
-        // Add the padding view constraints
-        window.addConstraint(NSLayoutConstraint(item: paddingView, attribute: .Width, relatedBy: .Equal, toItem: dropdown, attribute: .Width, multiplier: 1, constant: 0))
-        window.addConstraint(NSLayoutConstraint(item: paddingView, attribute: .Height, relatedBy: .Equal, toItem: dropdown, attribute: .Height, multiplier: 1, constant: 0))
-        window.addConstraint(NSLayoutConstraint(item: paddingView, attribute: .CenterX, relatedBy: .Equal, toItem: dropdown, attribute: .CenterX, multiplier: 1, constant: 0))
-        window.addConstraint(NSLayoutConstraint(item: paddingView, attribute: .Bottom, relatedBy: .Equal, toItem: dropdown, attribute: .Top, multiplier: 1, constant: 0))
-
-        window.layoutIfNeeded()
-
-        let animation = self.popAnimationForAnimationType(animationType)
-        animation.toValue = Defaults.Height
-        animatedConstraint.pop_addAnimation(animation, forKey: "show-dropdown")
-
-        dropdown.performSelector(#selector(dismiss), withObject: nil, afterDelay: duration + Defaults.AnimationDuration)
     }
 
     /**
@@ -162,10 +165,12 @@ public extension DropdownAlert {
         guard let animatedConstraint = constraints.first else {
             return
         }
-        let dismissAnimation = POPBasicAnimation(propertyNamed: kPOPLayoutConstraintConstant)
-        dismissAnimation.toValue = -Defaults.Height
-        dismissAnimation.duration = Defaults.AnimationDuration
-        animatedConstraint.pop_addAnimation(dismissAnimation, forKey: "dropdown-dismiss")
+        dispatch_async(dispatch_get_main_queue()) {
+            let dismissAnimation = POPBasicAnimation(propertyNamed: kPOPLayoutConstraintConstant)
+            dismissAnimation.toValue = -Defaults.Height
+            dismissAnimation.duration = Defaults.AnimationDuration
+            animatedConstraint.pop_addAnimation(dismissAnimation, forKey: "dropdown-dismiss")
+        }
     }
 
     /**
@@ -286,9 +291,8 @@ private extension DropdownAlert {
         self.addConstraint(NSLayoutConstraint(item: self.messageLabel, attribute: .Top, relatedBy: .Equal, toItem: self.titleLabel, attribute: .Bottom, multiplier: 1, constant: 0))
         self.addConstraint(NSLayoutConstraint(item: self.messageLabel, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1, constant: 0))
         self.addConstraint(NSLayoutConstraint(item: self.messageLabel, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 1, constant: 0))
-        
+
         self.layoutIfNeeded()
-        
+
     }
 }
-
