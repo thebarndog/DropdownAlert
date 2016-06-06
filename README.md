@@ -23,7 +23,7 @@ Finally, there's a huge caveat:
 
 Developers have come to expect the convenience of Cocoapods and if you can't both customize the dropdown and download it from Cocoapods, what's the point?
 
-That's where `DropdownAlert` comes in. Weighing in at just under 300 lines, `DropdownAlert` is _sleek_, _fully customizable_, _responsive_, _Swift 2.2 compatible_, and powered by [Facebook's pop](https://github.com/facebook/pop) animation library, allowing for awesome custom animations.
+That's where `DropdownAlert` comes in. Weighing in at just under 300 lines, `DropdownAlert` is _sleek_, _fully customizable_, _responsive_, _Swift 2.3 compatible_, and powered by [Facebook's pop](https://github.com/facebook/pop) animation library, allowing for awesome custom animations.
 
 ## Usage
 
