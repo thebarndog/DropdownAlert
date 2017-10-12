@@ -33,22 +33,23 @@ extension ViewController {
 }
 
 // MARK: - Setup
-private extension ViewController {
-    private func setup() {
-        DropdownAlert.defaultBackgroundColor = UIColor.blackColor()
-        DropdownAlert.defaultTextColor = UIColor.whiteColor()
-        self.basicAnimationButton.addTarget(self, action: #selector(showBasicAnimation), forControlEvents: .TouchUpInside)
-        self.springAnimationButton.addTarget(self, action: #selector(showSpringAnimation), forControlEvents: .TouchUpInside)
+fileprivate extension ViewController {
+    func setup() {
+        DropdownAlert.defaultBackgroundColor = UIColor.black
+        DropdownAlert.defaultTextColor = UIColor.white
+        self.basicAnimationButton.addTarget(self, action: #selector(ViewController.showBasicAnimation), for: .touchUpInside)
+        self.springAnimationButton.addTarget(self, action: #selector(ViewController.showSpringAnimation), for: .touchUpInside)
     }
 }
 
-private extension ViewController {
-    @objc private func showBasicAnimation() {
-        DropdownAlert.showWithAnimation(.Basic(timingFunction: CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)), title: "Sweet demo!", message: "Look how cool this is!", duration: 2)
+fileprivate extension ViewController {
+    @objc func showBasicAnimation() {
+        DropdownAlert.showWithAnimation(animationType: .Basic(timingFunction: CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)), title: "Sweet demo!", message: "Look how cool this is!", duration: 2)
     }
 
-    @objc private func showSpringAnimation() {
-        DropdownAlert.showWithAnimation(.Spring(bounce: 15, speed: 12), title: "Spring", message: "So bouncy!", duration: 2)
+    @objc func showSpringAnimation() {
+        DropdownAlert.showWithAnimation(animationType: .Spring(bounce: 15, speed: 12), title: "Spring", message: "So bouncy!", duration: 2)
+        //DropdownAlert.showWithAnimation(animationType: animationType,: .Spring(bounce: 15, speed: 12), title: "Spring", message: "So bouncy!", duration: 2)
     }
 
 }
